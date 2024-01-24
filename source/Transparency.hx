@@ -2,6 +2,7 @@ package;
 
 import cpp.*;
 
+#if windows 
 @:native("HWND__") extern class HWNDStruct {}
 typedef HWND = cpp.Pointer<HWNDStruct>;
 typedef BOOL = Int;
@@ -89,3 +90,4 @@ class Transparency
 		}*/
 	}
 }
+#end
