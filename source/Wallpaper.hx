@@ -1,13 +1,15 @@
 package;
-
+#if windows 
 @:headerCode('
     #include <windows.h>
     #include <iostream>
     #include <string>
     #include <hxcpp.h>
 ')
+#end
 class Wallpaper
 {
+	#if windows 
 	@:noCompletion
 	public static var oldWallpaper(default, null):String;
 
@@ -33,4 +35,5 @@ class Wallpaper
 	@:noCompletion
 	private static function _setOld():String
 		return "";
+	#end
 }
