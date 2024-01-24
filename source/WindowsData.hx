@@ -19,7 +19,7 @@ package;
 #undef FALSE
 #undef NO_ERROR
 ')
-#elseif linux
+#elseif android
 @:headerCode("#include <stdio.h>")
 #end
 #if windows
@@ -49,7 +49,7 @@ class WindowsData
 
 		return (allocatedRAM / 1024);
 	")
-	#elseif linux
+	#elseif android
 	@:functionCode('
 		FILE *meminfo = fopen("/proc/meminfo", "r");
 
